@@ -1,0 +1,99 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=160mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[hyphens]{url}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{acro}
+
+\begin{document}
+\pagenumbering{gobble}
+%\input{cover}
+%\input{aknowledgment}
+\input{abstract}
+\listoffigures
+\listoftables
+\pagebreak
+{\large
+\printacronyms[include-classes=abbrev,name=Liste des abréviations]}
+\tableofcontents
+\pagenumbering{arabic}
+\chapter*{Introduction Générale}
+\addcontentsline{toc}{chapter}{Introduction Générale} \markboth{INTRODUCTION}{}
+Dans le Web sémantique et dans le Web en général, un problème fondamental est la comparaison et l’appariement des données et la capacité de résoudre la multiplicité des références de données aux mêmes objets du monde réel, en définissant les correspondances entre les données sous forme de liens de données. La tâche de couplage de données devient de plus en plus importante à mesure que le nombre de données structurées et semi-structurées disponibles sur le Web augmente.
+La transformation du Web d’un « Web de documents » en un « Web de données », ainsi que la disponibilité d’importantes collections de données générées par des capteurs (« Internet des objets »), mènent à une nouvelle génération d’applications Web fondées sur l’intégration des données et des services. Parallèlement, de nouvelles données sont publiées chaque jour à partir de contenus générés par les utilisateurs et de sites Web publics. mène à une nouvelle génération d’applications Web En termes généraux, le couplage de données est la tâche de déterminer si deux descriptions d’objets peuvent être liées l’une à l’autre pour représenter le fait qu’elles se réfèrent au même objet du monde réel dans un cas décrivant les objets du monde réel à travers des sources de données hétérogènes, en supposant que la similarité entre deux descriptions de données est plus élevée, plus grande est la probabilité que la liaison inclut également la tâche de définir des méthodes, des techniques et des outils (semi-)automatisés pour Dans ce contexte, l’une des initiatives les plus importantes dans le domaine du Web sémantique est le lien entre les grandes collections de données déjà disponibles sur le Web \cite{LDOW}. exemple de données liées montre comment la tâche de liaison de données est cruciale sur le Web de nos jours. les méthodes et les techniques de liaison des données sur le Web sémantique. En outre, il existe d’importants travaux décrivant des domaines de recherche très proches des caractéristiques de liaison de données sémantiques qui nécessitent des solutions spécifiques tant en termes de nouvelles techniques que dans Par exemple, d’une part, le couplage de données nécessite de traiter la complexité sémantique typique du couplage ontologique, mais d’autre part, la grande quantité de données disponibles du champ de couplage de données sur le Web sémantique. Dans ce document, nous donnons une définition générale de ce domaine, afin de souligner les problèmes et de décrire les solutions. Nous allons mieux définir le problème de liaison de données, en discutant également de nombreux algorithmes. L’objectif de ce projet est d’étudier les approches existantes en matière d’édition collaborative des données sémantiques, afin de faire une comparaison collaborative entre ces approches, et de proposer un éditeur collaboratif distribué pour les données sémantiques capables de supporter des groupes dynamiques où les utilisateurs peuvent se joindre et partir à tout moment.\cite{WLD}
+\chapter{Web et données sémantique}
+Le Web sémantique Pour bien comprendre , nous commençons par une définition. Le grand dictionnaire terminologique définit le terme sémantique comme « l'ensemble des relations entre les caractères, ou groupes de caractères, et leur significations, indépendamment de la façon de les employer ou de les interpréter. » Il précise par la suite que « si, en linguistique, la sémantique porte sur l'étude du sens à partir de la combinaison des mots, en intelligence artificielle, elle porte sur la capacité d'un réseau [le Web] à représenter de la manière la plus humaine possible des relations entre des objets, des idées ou des situations. » Le terme sémantique implique donc que la machine ne se contentera plus de présenter visuellement les données du Web, mais, en les reliant, elle pourra conserver les significations qui leur sont attribuables. Or, en transformant le contenu du Web pour qu'il soit « compréhensible » par la machine et non seulement présentable, nous permettons à cette même machine d'être plus efficace dans le traitement de l'information. Ainsi, le dialogue avec les moteurs de recherche devient possible. Nous sommes alors en mesure de nous exprimer dans des termes que nos ordinateurs peuvent aussi interpréter et échanger. Il est également possible  d'automatiser, d'intégrer et de réutiliser l'information entre diverses applicationsLe Web sémantique est décrit généralement comme un Web destiné aux machines. Disposer d'un Web dont le contenu est abordable par les machines peut apporter de grands bénéfices: L'automatisation de nombreuses tâches fondées sur le contenu comme la recherche de ressources ayant un contenu particulier, la comparaison du contenu de ressources (pages, bases de données, ontologies, etc…). Le Web sémantique permettrait de résoudre la relative difficulté de trouver de l'information sur le
+web.\cite{SEMANTCWEB}
+Le Web sémantique a pour objectif de transformer le World Wide Web actuel, entièrement tourné vers la présentation des 
+documents, vers un Web dont le contenu serait compréhensible par les machines. La vision s’appuie sur l’utilisation d’ontologies.
+Le Web sémantique n’est pas un Web séparé mais une extension du Web actuel, dans lequel l’information est bien définie, permettant ainsi aux ordinateurs et aux personnes de travailler en coopération.
+Le Web sémantique permettra aux machines de comprendre les documents et les données sémantiques, et non la parole humaine et les écrits.\cite{SEMANTCWEB}
+\section{RDF}
+RDF est un acronyme de Resource Description Framework. RDF est une norme W3C des technologies Web sémantiques et la base de l’architecture standardisée des technologies Web Sémantique. Le RDF est un langage simple pour exprimer des modèles de données sous forme d'objets « ressources » et de leurs relations. Il sera utilisé pour annoter des documents écrits dans des langages non structurés, ou comme une interface pour des documents écrits dans des langages ayant une sémantique équivalente (des bases de données, par exemple).
+Un document RDF est un ensemble de triplets de la forme <sujet, prédicat, objet>. Les éléments de ces triplets peuvent être des URIs (Universal Resource Identifiers), des littéraux ou des variables. Cet ensemble de triplets peut être représenté de façon naturelle par un graphe (plus précisément un multi-graphe orienté étiqueté), où les éléments apparaissant comme sujet ou objet sont les sommets, et chaque triplet est représenté par un arc dont l’origine est son sujet et la destination son objet . [Berners-Lee et al., 1998]
+
+
+ontologie ;
+
+
+\section{LINKED DATA (DONNÉES LIÉES)}
+Le Web est de plus en plus considéré comme un espace d’information global constitué non seulement de documents liés, mais aussi de données liées. Plus qu’une simple vision, le Web of Data qui en résulte est né de la maturation de la pile de technologies du Web sémantique et de la publication d’un nombre croissant d’ensembles de données selon les principes des Données Liées.\cite{LDOW}
+En soi, un réseau de données (données liées) est l'une des composantes d'un réseau La sémantique, c'est probablement l'application la plus connue. arrive parfois Certaines personnes ont confondu les deux, beaucoup ne sont pas d'accord sur ce point (Heath, 2009 ; Hendler, 2009). De plus, le W3C a cessé de se mettre à jour le 11 décembre 2013 Les pages de son site Internet sont dédiées au Web sémantique 2, indiquant aux visiteurs qu'il a Intrigué par une autre page dédiée à leur soi-disant W3C Data Activity 3. ll est Il est donc intéressant de souligner l'évolution du concept de Web sémantique, non seulement pour Il en va de même aux yeux des professionnels du domaine, et au sein des organisations qui l'encadrent. Le W3C indique également que les résultats de la mise en œuvre du Web sémantique indiquent que un certain succès mais qu’ils ne correspondaient pas à ce qui avait été envisagé au départ. En effet, le consortium s’attendait à ce que les activités de publication de pages Web et de données soient similaires.Cependant, on a vite découvert que la publication des données (date, nom, propriétés chimiques, emplacement, etc.) est considérée comme une activité exercée par un expert Domaine plutôt qu'une activité que tout le monde peut effectuer (W3C, 2013). Pour éviter toute confusion entre le Web sémantique et le Web de données, on peut Dire que la data world wide web fait partie des applications qui entrent dans la grande famille Web sémantique. Comme nous le verrons dans la section 2.7, les données structurées en interne C'est aussi l'une des applications du Web sémantique. Le réseau de données doit être pris en compte comme un ensemble de pratiques et de normes pour la publication de données structurées sur le web afin qu'ils puissent être reliés entre eux et interrogés.[Ivan Herman , Eric Prud'hommeaux , 2013 , Semantic Web Activity Lead ]
+2013-06-19
+En 2006, Tim Berners-Lee a publié la première ébauche d'un article sur le site Web du W3C intitulé Données liées. Jusqu'en 2010, cette page a été révisée plusieurs fois, ajoutant Lien open data 5 étoiles, nous reviendrons bientôt. Cette note est destinée à articuler certains aspects du réseau de données et passer en revue les objectifs derrière la mise en œuvre les éléments, le fait que les données sont partagées et que des connexions sont établies entre eux. établi
+Semantic Web Education and Outreach Interest Group (SWEO), maintenant fermé depuis 2008, il est donc possible d'assurer l'accessibilité du guide, permettant à ceux aimeraient mieux comprendre les outils à leur disposition afin de pouvoir publier leurs données sur le Web.(Phil Archer 2013 ,emantic Web Activity Lead]
+
+
+
+\section{Edition des données sémantiques}
+
+
+
+\section{CRDT (type de donnée répliqué commutatif)}
+C'est un type de données répliqué pour lequel certaines propriétés mathématiques simples garantissent une cohérence éventuelle. Dans l’État style, les états successifs d’un objet devraient former un semi-réseau monotone, avec fusionner le calcul d’une limite inférieure. Dans le style op-based, concurrent En supposant seulement que le sous-système de communication assure la livraison éventuelle (en ordre causal pour les objets basés sur les opérations), les CRDT sont garantie de converger vers un état commun et correct, sans nécessiter synchronisation. 
+L'idée principale est de trouver le type de données pour les déplacements naturels -
+lentement. Partant de ce principe, tout type de CRDT a été démontré dans 
+Convergence si toutes les opérations sont référencées par des identifiants uniques
+différent. Le défi se résume donc à concevoir des types de données et des techniques
+approprié pour assurer la commutativité des opérations.[Marc Shapiro and Nuno M. Preguiça. Designing a commutative replicated
+data type. CoRR, abs/0710.1784, 2007.]
+L'idée consiste à associer un identifiant unique à chaque emplacement
+Partagez des symboles, des lignes ou des atomes de document. Si l'opération d'insertion est
+Lorsqu'il est généré, l'identifiant unique est également associé au paramètre positionnel
+fonctionner. Les ID de travail ne changent pas, ils sont entièrement
+commande. Élément de document (caractère, symbole, ligne ou atome)
+S'affichent par ordre croissant par rapport à leurs identifiants.
+Cependant, la gestion des identifiants est un problème très sérieux car La précision de cette méthode repose sur l'unicité et la préservation de l'identifiant Un changement dans l'ordre général des opérations. Par conséquent, la plage de valeurs de l'identifiant doit être choisie pour être compacte. Ainsi, entre les deux identifiants Etant donné, il doit toujours être possible de créer un nouvel identifiant. 
+Parmi les algorithmes de CRDT existants, nous distinguons : OR-Set , C-SET ,SU-Set , B-SET, sr-CE et LD-SET Nous présentons ci-après chacun de ces algorithmes.
+\section{Les algorithmes d'édition de données sémantique}
+\subsection{OR-Set}
+OR-Set est conçu pour la mise à jour basée sur les éléments, il n’est pas adapté pour les opérations basées sur les modèles comme les opérations de mise à jour SPARQ  Afin de réduire la complexité de la communication, au lieu d’étiqueter chaque élément séparément Remarquez que dans le cas d’OR-Set, le nombre de tours serait égal à le nombre de triples exploités, car nous devons envoyer un message pour chaque un. Les triples en double n’affectent pas la complexité des tours, ils sont traités comme un insertion normale.
+\subsection{C-SET \cite{C-SET}}
+est un CRDT conçu pour le type de données de l’ensemble.
+compteur associé à chaque élément pour garder une trace du nombre de fois qu’il a été ajouté et supprimé. Un élément est considéré comme membre du C-Set si son compteur
+est supérieur à zéro. C-Set est convergent, laisse la causalité au sous-jacent réseau, mais malheureusement, quand une suppression suivie d’un insert sont exécutés
+l’intention n’est pas préservée. La figure 4 présente un exemple de violation de l’intention dans l’ensemble C. À partir d’un point où un élément x a 3 dans son compteur et donc, pas un membre de l’ensemble. Si deux nœuds décident simultanément pour insérer x et le supprimer immédiatement, ils convergeront vers un état où x est un membre de l’ensemble, ce qui n’était l’intention d’aucun d’eux.
+\subsection{SU-Set}
+SU-Set a été développée pour servir comme une base pour les entrepôts RDF qui 
+pourrait s’implémenter dans un moteur d’inférence RDF. SU-Set modifie le comportement des 
+opérations à diffuser de telles sortes que l’ensemble des triplets seront affectés un par un.
+\subsection{B-SET \cite{B-SET}} repose sur l’entreposage de « pierres tombales », c.-à-d. les éléments supprimés sont simplement cachés à l’utilisateur via l’opération de recherche. L’utilisation de pierres tombales n’est pas appropriée pour les grands ensembles comme ceux que nous pouvons trouver dans le réseau de données, car leur complexité spatiale est élevée.
+\subsection{srCE}
+Une importante propriété du modèle srCE est que ses opérations ne s’exécutent pas 
+directement sur l’ensemble final mais elles doivent d’abord s’exécuter sur l’un des multi-sets 
+supplémentaires, selon le type de l’opération. Par la suite, une opération interne se génère en vue 
+de produire un ensemble cohérent.
+\subsection{LD-SET}
+LD-Set est conforme à CRDT, il garantit la cohérence éventuelle dans tout les cas LD-Set concentre sur un mécanisme de réplication optimiste. Il vise à
+soutenir l’édition collaborative sociale de Données liées au sein d’une communauté virtuelle d’utilisateurs de différents sites, tout en maintenant une cohérence éventuelle afin de mise à jour simultanée
+\section{Etude comparative entre ces algorithmes}
+\section*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion} \markboth{CONCLUSION}{}
+
+\bibliography{bibio} 
+\bibliographystyle{ieeetr}
+\end{document}
